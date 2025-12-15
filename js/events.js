@@ -40,3 +40,8 @@ darkMode.onclick = function black (){
 .addEventListener("click",function (){
     document.body.style.backgroundColor = "yellow"
 })
+
+const makeGoldenRod = document.getElementById("gold")
+ .addEventListener("click",function () {
+   document.body.style.background = "gold"
+})
