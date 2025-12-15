@@ -25,3 +25,11 @@ const makePurple = document.getElementById("btn-make-purple")
       document.body.style.backgroundColor = "purple"
  }
 
+
+//  dark body****
+
+const darkMode = document.getElementById("btn-black")
+// console.log(darkMode)
+darkMode.onclick = function black (){
+    document.body.style.backgroundColor = "#000000e6"
+}
