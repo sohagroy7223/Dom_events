@@ -33,3 +33,10 @@ const darkMode = document.getElementById("btn-black")
 darkMode.onclick = function black (){
     document.body.style.backgroundColor = "#000000e6"
 }
+
+// option 4: addEvenListener
+
+ const makeYellow =document.getElementById("btn-make-yellow")
+.addEventListener("click",function (){
+    document.body.style.backgroundColor = "yellow"
+})
