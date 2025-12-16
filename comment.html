@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>comment box</title>
+    <style>
+        .coment-title{
+            border: 2px solid blue;
+            background-color: rgb(240, 207, 207);
+            font-size: 1.4rem;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>this is title</h1>
+    <div id="comment-parent">
+        <div class="coment-title">Lorem ipsum dolor sit amet consectetur adipisicing
+             elit. Excepturi at minus facere labore in totam laboriosam animi error 
+             aspernatur veritatis?</div>
+        <div class="coment-title">Lorem ipsum dolor sit amet consectetur adipisicing
+
+             elit. Excepturi at minus facere labore in totam laboriosam animi error 
+             aspernatur veritatis?</div>
+        <div class="coment-title">Lorem ipsum dolor sit amet consectetur adipisicing
+
+             elit. Excepturi at minus facere labore in totam laboriosam animi error 
+             aspernatur veritatis?</div>
+    </div>
+    <textarea name="" id="input-comment" cols="36" rows="5"></textarea>
+    <br>
+    <button id="btn-comment-post">post</button>
+    <script>
+        const commentPostBtn = document.getElementById("btn-comment-post")
+        .addEventListener("click", function (){
+           const inputComment = document.getElementById("input-comment")
+          const newText =inputComment.value;
+            
+         const commentContainer = document.getElementById("comment-parent")
+         const commentElement = document.createElement("p")
+         commentElement.classList.add("coment-title")
+          commentElement.innerText = newText
+          commentContainer.appendChild(commentElement)
+          inputComment.value=""
+        })
+    </script>
+</body>
+</html>
