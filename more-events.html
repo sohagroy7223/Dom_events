@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More events file</title>
+</head>
+<body>
+    <h1>its heading here add more events </h1>
+    <button id="mouse-btn">Micky Mouse minnie</button>
+
+    <input id="input-name" placeholder="your name" type="text">
+    <input id="input-email" placeholder="your email" type="email">
+
+
+    <script>
+        // document.getElementById("mouse-btn")
+        // .addEventListener("mouseenter", function (){
+        //     console.log("yes its work")
+        // })
+
+        // document.getElementById("mouse-btn")
+        // .addEventListener("mousemove", function (){
+        //     console.log("yes its work")
+        // })
+
+        document.getElementById("mouse-btn")
+        .addEventListener("mouseout", function (){
+            console.log("yes its work")
+        })
+
+        document.getElementById("input-name")
+        .addEventListener("focus", function  (){
+            console.log("user about to write name")
+        })
+        document.getElementById("input-email")
+        .addEventListener("focus", function  (){
+            console.log("user about to write email")
+        })
+
+        document.getElementById("input-name")
+        .addEventListener("blur", function  (){
+            console.log("user done with name")
+        })
+        document.getElementById("input-email")
+        .addEventListener("blur", function  (){
+            console.log("user done with email")
+        })
+    </script>
+</body>
+</html>
