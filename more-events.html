@@ -24,27 +24,31 @@
         //     console.log("yes its work")
         // })
 
-        document.getElementById("mouse-btn")
-        .addEventListener("mouseout", function (){
-            console.log("yes its work")
-        })
+        // document.getElementById("mouse-btn")
+        // .addEventListener("mouseout", function (){
+        //     console.log("yes its work")
+        // })
 
-        document.getElementById("input-name")
-        .addEventListener("focus", function  (){
-            console.log("user about to write name")
-        })
-        document.getElementById("input-email")
-        .addEventListener("focus", function  (){
-            console.log("user about to write email")
-        })
+        // document.getElementById("input-name")
+        // .addEventListener("focus", function  (){
+        //     console.log("user about to write name")
+        // })
+        // document.getElementById("input-email")
+        // .addEventListener("focus", function  (){
+        //     console.log("user about to write email")
+        // })
 
-        document.getElementById("input-name")
-        .addEventListener("blur", function  (){
-            console.log("user done with name")
-        })
+        // document.getElementById("input-name")
+        // .addEventListener("blur", function  (){
+        //     console.log("user done with name")
+        // })
         document.getElementById("input-email")
-        .addEventListener("blur", function  (){
-            console.log("user done with email")
+        .addEventListener("keyup", function  (event){
+            console.log("typing", event.target.value)
+        })
+        document.getElementById("input-name")
+        .addEventListener("keydown", function  (event){
+            console.log("typing", event.target.value)
         })
     </script>
 </body>
