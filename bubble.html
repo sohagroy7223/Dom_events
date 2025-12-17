@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event bubble </title>
+    <style>
+        body{
+            border: 2px solid blue;
+            padding: 5px;
+            margin: 5px;
+        }
+        section{
+            border: 2px solid green;
+            padding: 5px;
+            margin: 5px;
+        }
+        ol{
+            border: 2px solid yellow;
+            padding: 5px;
+            margin: 5px;
+        }
+        li{
+            border: 2px solid purple    ;
+            padding: 5px;
+            margin: 5px; 
+        }
+    </style>
+</head>
+<body id="body">
+    <h1>Explore Event bubble</h1>
+    <section id="section">
+        <h3>list of things</h3>
+        <ol id="list-container">
+            <li id="items-1">Lorem, ipsum</li>
+            <li id="items-2">Lorem, ipsum</li>
+            <li id="items-3">Lorem, ipsum</li>
+            <li id="items-4">Lorem, ipsum</li>
+            <li id="items-5">Lorem, ipsum</li>
+            <li id="items-6">Lorem, ipsum</li>
+        </ol>
+    </section>
+    <script>
+        // item-3 click handler
+        document.getElementById("items-3")
+        .addEventListener("click", function (event){ 
+            console.log("item 3 is clicked")
+            event.stopPropagation()
+        })
+        document.getElementById("items-3")
+        .addEventListener("click", function (event){ 
+            console.log("second time press clicked")
+            // event.stopPropagation()
+        })
+        // ol click handler
+        document.getElementById("list-container")
+        .addEventListener("click", function (){ 
+            console.log("ol is clicked")
+        })
+        // section click handler
+        document.getElementById("section")
+        .addEventListener("click", function (){ 
+            console.log("section is clicked")
+        })
+        // body click handler
+        document.getElementById("body")
+        .addEventListener("click", function (){ 
+            console.log("body is clicked")
+        })
+    </script>
+</body>
+</html>
