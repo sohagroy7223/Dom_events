@@ -45,6 +45,7 @@
         document.getElementById("items-3")
         .addEventListener("click", function (event){ 
             console.log("item 3 is clicked")
+            // stop propagation
             event.stopPropagation()
         })
         document.getElementById("items-3")
@@ -61,6 +62,7 @@
         document.getElementById("section")
         .addEventListener("click", function (event){ 
             console.log("section is clicked")
+            // stop immediate propagation
             event.stopImmediatePropagation()
         })
         // body click handler
