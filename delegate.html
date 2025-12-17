@@ -15,17 +15,39 @@
         <li class="item">My awesome Item-5</li>
         <li class="item">My awesome Item-6</li>
     </ol>
+    <button id="btn-add-item">add new item</button>
     <script>
-        const items = document.getElementsByClassName("item")
-        // console.log(items)
-        for(const item of items){
-            item.addEventListener("click", function (event){
-                // console.log(event.target.parentNode)
-                event.target.parentNode.removeChild(event.target)
+        // const items = document.getElementsByClassName("item")
+        // // console.log(items)
+        // for(const item of items){
+        //     item.addEventListener("click", function (event){
+        //         // console.log(event.target.parentNode)
+        //         event.target.parentNode.removeChild(event.target)
                 
-            })
-        }
+        //     })
+        // }
 
+        // or************
+
+        document.getElementById("item-list")
+        .addEventListener("click", function (event) {
+            event.target.parentNode.removeChild(event.target)
+           
+
+        })
+
+        // add a new item
+        document.getElementById("btn-add-item")
+        .addEventListener("click", function (){
+            const itemList = document.getElementById("item-list")
+
+            // new item
+            const li = document.createElement("li")
+            li.innerText = "brand new item add"
+            
+            // add the item
+            itemList.appendChild(li);
+        })
     </script>
 </body>
 </html>
