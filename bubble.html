@@ -59,8 +59,9 @@
         })
         // section click handler
         document.getElementById("section")
-        .addEventListener("click", function (){ 
+        .addEventListener("click", function (event){ 
             console.log("section is clicked")
+            event.stopImmediatePropagation()
         })
         // body click handler
         document.getElementById("body")
